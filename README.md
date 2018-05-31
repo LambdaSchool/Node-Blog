@@ -79,3 +79,22 @@ Design and build the necessary endpoints to:
 * From the React application connect to the `/api/users` endpoint in the API and show the list of users.
 * Add functionality to show the details of a user, including their posts, when clicking a user name in the list. Use React Router to navigate to a `/users/:id` route to show the user details.
 * Add styling!
+
+
+
+## API URL Guide
+
+
+### userDB
+* '/api/user' or '/api/user/:id' all CRUD.  Table only has id and name.
+* id is assigned by the server
+* '/api/user/:id/posts' get only. gets a table of posts by the user. has values of id(this id joins with post id on the postDB), text, and postedBy
+
+### postDB
+* '/api/post' or '/api/post/:id' all CRUD. Table has id, text, userID(this ID joins with id on users table) 
+* post id is assigned by the server
+* '/api/post/:id/tags' get only. gets a table that shows all the tags for a post. table only has a value of tag.
+
+### tagDB
+* '/api/tags' or '/api/tags/:id' all CRUD. Table only has id and tag fields
+* tag id is assigned by the server
