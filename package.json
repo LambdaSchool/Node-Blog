@@ -1,0 +1,23 @@
+{
+  "name": "node-blog",
+  "version": "1.0.0",
+  "description": "Lab for building an API using Node.js and Express",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "yarn --cwd ./client build",
+    "postinstall": "yarn --cwd ./client install && yarn --cwd ./client build"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "sqlite3": "^4.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
